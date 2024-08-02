@@ -1,5 +1,5 @@
 ---
 title: "Getting started"
-description: "Hit the ground running."
-date: "Mar 22 2024"
+description: "just a starting"
+date: "Aug 02 2024"
 ---
