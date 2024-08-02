@@ -33,7 +33,7 @@ const { entry } = Astro.props;
 ---
 import type { HTMLTag, Polymorphic } from "astro/types";
 import type { CollectionEntry } from "astro:content";
-
+import FormattedDate from "../layouts/FormattedDate.astro";
 
 
 const { entry } = Astro.props;
@@ -44,16 +44,15 @@ type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
 }
 
 const { as: Tag = "div", withDesc = false } = Astro.props;
-
-
+const postDate = entry.data.date;
 
 ---
 
 <li class='flex flex-col gap-2 sm:flex-row sm:gap-x-4 [&_q]:basis-full'>
-	<!-- <FormattedDate class='min-w-[120px]' date={postDate} /> -->
+	<FormattedDate class='min-w-[120px]' date={postDate} />
 
 	<Tag>
-		<!-- {post.data.draft && <span class='text-red-500'>(Draft) </span>} -->
+		{entry.data.draft && <span class='text-red-500'>(Draft) </span>}
 		<a
 			data-astro-prefetch
 			href={`/blog/${entry.slug}/`}
