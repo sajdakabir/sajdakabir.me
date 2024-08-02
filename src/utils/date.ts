@@ -1,5 +1,6 @@
 // utils.js
-export function getFormattedDate(date, options) {
-    return new Intl.DateTimeFormat("en-US", options).format(date);
-  }
-  
+interface DateFormatOptions extends Intl.DateTimeFormatOptions {}
+
+export function getFormattedDate(date: Date, options?: DateFormatOptions): string {
+  return new Intl.DateTimeFormat("en-US", options).format(date);
+}
