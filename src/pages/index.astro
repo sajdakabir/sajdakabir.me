@@ -30,22 +30,22 @@ const blog = (await getCollection("blog"))
 ---
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
-  <Container>
+  <Container class="text-black dark:text-white font-mono">
     <h4 class="animate text-black dark:text-white font-mono">
       Hi, I'm Sajda Kabir  <span class="text-xl">(✿◠‿◠)</span> 
     </h4>
-    <div class="space-y-16 font-mono">
+    <div class="space-y-16 text-black dark:text-white font-mono">
       <section>
         <article class="space-y-4">
-          <p class="animate">
+          <p class="animate  text-black dark:text-white font-mono">
             I live in the satellites, I love making things for people who make things.
           </p>
-          <p class="animate">
+          <p class="animate  text-black dark:text-white font-mono">
             Currently crafting  <Link href="https://march.cat" external>
               march
             </Link>— a second brain for makers to get things done.
           </p>
-          <p class="animate">
+          <p class="animate  text-black dark:text-white font-mono">
             Feel free to drop a 
             <Link href="mailto:sajda.kbir@gmail.com" external>
               hello
@@ -67,7 +67,7 @@ const blog = (await getCollection("blog"))
           </h5>
 
         </div>
-        <ul class="flex flex-col gap-4">
+        <ul class="flex flex-col gap-4  text-black dark:text-white font-mono">
           {blog.map(post => (
             <li>
               <ArrowCard entry={post} />
