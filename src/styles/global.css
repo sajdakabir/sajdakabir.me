@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); */
 
 html {
   overflow-y: scroll;
@@ -17,11 +18,17 @@ body {
 }
 
 body {
-  @apply font-sans antialiased;
+  @apply font-mono antialiased; 
   @apply flex flex-col;
-  @apply bg-stone-100 dark:bg-stone-900;
+  @apply bg-stone-50 dark:bg-black; 
   @apply text-black/50 dark:text-white/75;
+
 }
+
+/* body {
+  @apply font-sans flex flex-col bg-stone-50 dark:bg-black text-black/50 dark:text-white/75;
+  font-family: 'Inter', sans-serif;
+} */
 
 header {
   @apply fixed top-0 left-0 right-0 z-50 py-5;

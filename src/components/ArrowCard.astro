@@ -1,4 +1,4 @@
----
+<!-- ---
 import type { CollectionEntry } from "astro:content";
 
 type Props = {
@@ -9,19 +9,65 @@ const { entry } = Astro.props;
 ---
 
 <a href={`/${entry.collection}/${entry.slug}`} class="relative group flex flex-nowrap py-3 px-4 pr-10 rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
-  <div class="flex flex-col flex-1 truncate">
+  <!-- <div class="flex flex-col flex-1 truncate">
     <div class="font-semibold">
       {entry.data.title}
     </div>
     <div class="text-sm">
       {entry.data.description}
     </div>
-  </div>
-  <svg 
+  </div> -->
+  <!-- <svg 
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 24 24"
     class="absolute top-1/2 right-2 -translate-y-1/2 size-5 stroke-2 fill-none stroke-current">
     <line x1="5" y1="12" x2="19" y2="12" class="translate-x-3 group-hover:translate-x-0 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
     <polyline points="12 5 19 12 12 19" class="-translate-x-1 group-hover:translate-x-0 transition-transform duration-300 ease-in-out" />
-  </svg>
-</a>
+  </svg> 
+ import FormattedDate from '../FormattedDate.astro'
+</a> -->
+
+
+
+
+---
+import type { HTMLTag, Polymorphic } from "astro/types";
+import type { CollectionEntry } from "astro:content";
+
+
+
+const { entry } = Astro.props;
+
+type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
+  entry: CollectionEntry<"blog">
+	withDesc?: boolean
+}
+
+const { as: Tag = "div", withDesc = false } = Astro.props;
+
+
+
+---
+
+<li class='flex flex-col gap-2 sm:flex-row sm:gap-x-4 [&_q]:basis-full'>
+	<!-- <FormattedDate class='min-w-[120px]' date={postDate} /> -->
+
+	<Tag>
+		<!-- {post.data.draft && <span class='text-red-500'>(Draft) </span>} -->
+		<a
+			data-astro-prefetch
+			href={`/blog/${entry.slug}/`}
+			class='transition-all hover:text-muted-foreground'
+		>
+			{entry.data.title}
+		</a>
+		{
+			withDesc && (
+				<p class='line-clamp-3 block text-sm italic text-muted-foreground'>
+					{entry.data.title}
+				</p>
+			)
+		}
+	</Tag>
+</li>
+

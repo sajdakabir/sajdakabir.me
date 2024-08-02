@@ -5,8 +5,11 @@ import { SITE } from "@consts";
 ---
 
 <header>
-  <Container>
+  <Container >
     <div class="flex flex-wrap gap-y-2 justify-between">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
       <Link href="/" underline={false}>
         <div class="font-semibold">
           {SITE.NAME}
@@ -14,20 +17,20 @@ import { SITE } from "@consts";
       </Link>
       <nav class="flex gap-1">
         <Link href="/blog">
-          blog
+          blogs
         </Link>
-        <span>
+        <!-- <span>
           {`/`}
-        </span>
-        <Link href="/work">
+        </span> -->
+        <!-- <Link href="/work">
           work
-        </Link>
-        <span>
+        </Link> -->
+        <!-- <span>
           {`/`}
         </span>
         <Link href="/projects">
           projects
-        </Link>
+        </Link> -->
       </nav>
     </div>
   </Container>
