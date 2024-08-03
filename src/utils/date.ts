@@ -1,6 +1,8 @@
-// utils.js
-interface DateFormatOptions extends Intl.DateTimeFormatOptions {}
 
-export function getFormattedDate(date: Date, options?: DateFormatOptions): string {
-  return new Intl.DateTimeFormat("en-US", options).format(date);
+export function getFormattedDate(date: Date): string {
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are zero-indexed
+  const year = date.getFullYear();
+  
+  return `${day}-${month}-${year}`;
 }
