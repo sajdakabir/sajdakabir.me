@@ -6,15 +6,56 @@ type Props = {
 const { href } = Astro.props;
 ---
  
-<a href={href} class="relative group w-fit flex pl-7 pr-3 py-1.5 flex-nowrap rounded border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
+
+<!-- <a 
+  href={href}
+  class="relative group w-fit flex items-center space-x-2 transition-colors duration-300 ease-in-out text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white">
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+
+  <div class="text-base relative">
+    <slot/>
+    <span class="absolute bottom-0 left-0 w-full h-[1.5px] bg-transparent group-hover:bg-current transition-all duration-300 ease-in-out"></span>
+  </div>
+</a> -->
+
+<!-- <a 
+  href={href}
+  class="relative group w-fit flex items-center space-x-2 transition-colors duration-300 ease-in-out text-gray-400 dark:text-gray-400 hover:text-black dark:hover:text-white">
+
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  class="lucide lucide-chevron-right group-hover:stroke-current text-gray-400 dark:text-gray-400"><path d="m9 18 6-6-6-6"/></svg>
+
+  <div class="text-base relative">
+    <slot/>
+    <span class="absolute bottom-0 left-0 w-full h-[1.2px] bg-transparent group-hover:bg-current transition-all duration-300 ease-in-out"></span>
+  </div>
+</a> -->
+
+<a 
+  href={href}
+  class="relative group w-fit flex items-center space-x-1 transition-colors duration-300 ease-in-out text-gray-400 dark:text-gray-400 hover:text-black dark:hover:text-white">
+
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
-    viewBox="0 0 24 24"
-    class="absolute top-1/2 left-2 -translate-y-1/2 size-4 stroke-2 fill-none stroke-current">
-    <line x1="5" y1="12" x2="19" y2="12" class="translate-x-2 group-hover:translate-x-0 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
-    <polyline points="12 5 5 12 12 19" class="translate-x-1 group-hover:translate-x-0 transition-transform duration-300 ease-in-out" />
+    width="20" 
+    height="20" 
+    viewBox="0 0 24 24" 
+    fill="none" 
+    stroke="currentColor" 
+    stroke-width="2" 
+    stroke-linecap="round" 
+    stroke-linejoin="round" 
+    class="lucide lucide-chevron-right text-gray-400 dark:text-gray-400">
+    <path d="m9 18 6-6-6-6"/>
   </svg>
-  <div class="text-sm">
+
+  <div class="text-base relative flex items-center">
     <slot/>
+    <span class="absolute bottom-0 left-0 w-full h-[1.2px] bg-transparent group-hover:bg-current transition-all duration-300 ease-in-out"></span>
   </div>
 </a>
+
+
+
+
+
