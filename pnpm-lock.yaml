@@ -22,7 +22,7 @@ importers:
         version: 3.1.1
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.5.6(typescript@5.4.2))(tailwindcss@3.4.1)
+        version: 5.1.0(astro@4.5.6(typescript@5.4.2))(tailwindcss@3.4.10)
       '@fontsource/inter':
         specifier: ^5.0.17
         version: 5.0.17
@@ -31,7 +31,7 @@ importers:
         version: 5.0.18
       '@tailwindcss/typography':
         specifier: ^0.5.14
-        version: 0.5.14(tailwindcss@3.4.1)
+        version: 0.5.14(tailwindcss@3.4.10)
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.3.1
         version: 7.3.1(@typescript-eslint/parser@7.3.1(eslint@8.57.0)(typescript@5.4.2))(eslint@8.57.0)(typescript@5.4.2)
@@ -60,8 +60,8 @@ importers:
         specifier: ^2.5.2
         version: 2.5.2
       tailwindcss:
-        specifier: ^3.4.1
-        version: 3.4.1
+        specifier: ^3.4.10
+        version: 3.4.10
       typescript:
         specifier: ^5.4.2
         version: 5.4.2
@@ -2776,8 +2776,8 @@ packages:
   tailwind-merge@2.5.2:
     resolution: {integrity: sha512-kjEBm+pvD+6eAwzJL2Bi+02/9LFLal1Gs61+QB7HvTfQQ0aXwC5LGT8PEt1gS0CWKktKe6ysPTAy3cBC5MeiIg==}
 
-  tailwindcss@3.4.1:
-    resolution: {integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==}
+  tailwindcss@3.4.10:
+    resolution: {integrity: sha512-KWZkVPm7yJRhdu4SRSl9d4AK2wM3a50UsvgHZO7xY77NQr2V+fIrEuoDGQcbvswWvFGbS2f6e+jC/6WJm1Dl0w==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -3280,13 +3280,13 @@ snapshots:
       sitemap: 7.1.1
       zod: 3.22.4
 
-  '@astrojs/tailwind@5.1.0(astro@4.5.6(typescript@5.4.2))(tailwindcss@3.4.1)':
+  '@astrojs/tailwind@5.1.0(astro@4.5.6(typescript@5.4.2))(tailwindcss@3.4.10)':
     dependencies:
       astro: 4.5.6(typescript@5.4.2)
       autoprefixer: 10.4.18(postcss@8.4.37)
       postcss: 8.4.37
       postcss-load-config: 4.0.2(postcss@8.4.37)
-      tailwindcss: 3.4.1
+      tailwindcss: 3.4.10
     transitivePeerDependencies:
       - ts-node
 
@@ -3762,13 +3762,13 @@ snapshots:
 
   '@shikijs/core@1.2.0': {}
 
-  '@tailwindcss/typography@0.5.14(tailwindcss@3.4.1)':
+  '@tailwindcss/typography@0.5.14(tailwindcss@3.4.10)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.1
+      tailwindcss: 3.4.10
 
   '@types/acorn@4.0.6':
     dependencies:
@@ -6679,7 +6679,7 @@ snapshots:
 
   tailwind-merge@2.5.2: {}
 
-  tailwindcss@3.4.1:
+  tailwindcss@3.4.10:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
