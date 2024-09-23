@@ -1,5 +1,5 @@
 ---
-title: "Habite hopping"
+title: "Habit hopping"
 description: ""
 date: "Aug 03 2024"
 ---
