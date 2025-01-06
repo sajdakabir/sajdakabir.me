@@ -20,7 +20,7 @@ body {
 body {
   @apply font-mono antialiased; 
   @apply flex flex-col;
-  @apply bg-stone-50 dark:bg-black; 
+  @apply bg-stone-50 dark:bg-[#1f1f1f]; 
   @apply text-black/50 dark:text-white/75;
 
 }
@@ -44,10 +44,12 @@ footer {
   @apply py-5 text-sm;
 }
 
-article {
-  @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto;
-  @apply prose-headings:font-semibold prose-p:font-mono;
-  @apply prose-headings:text-black prose-headings:dark:text-white;
+@layer components {
+  article {
+    @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto;
+    @apply prose-headings:font-semibold prose-p:font-mono;
+    @apply prose-headings:text-black prose-headings:dark:text-white;
+  }
 }
 
 @layer utilities {
