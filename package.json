@@ -22,7 +22,7 @@
     "@fontsource/lora": "^5.2.8",
     "@tailwindcss/typography": "^0.5.19",
     "@typescript-eslint/eslint-plugin": "^8.56.1",
-    "@typescript-eslint/parser": "^8.55.0",
+    "@typescript-eslint/parser": "^8.58.1",
     "astro": "^5.18.1",
     "clsx": "^2.1.0",
     "eslint": "^10.1.0",
